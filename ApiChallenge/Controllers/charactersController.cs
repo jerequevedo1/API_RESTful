@@ -23,11 +23,18 @@ namespace ApiChallenge.Controllers
 			return context.Personaje.ToList();
 		}
 
-		[HttpGet("{id}")]
+		[HttpGet("{id:int}")]
 		public Personaje GetPersonajes(int id)
 		{
 			var context = new MVCContext();
 			return context.Personaje.FirstOrDefault(x => x.IdPersonaje == id);
+		}
+
+		[HttpGet("{imagen}")]
+		public Personaje GetPersonajes([FromBody] string imagen)
+		{
+			var context = new MVCContext();
+			return context.Personaje.FirstOrDefault(x => x.Imagen == imagen);
 		}
 
 		[HttpPost]
