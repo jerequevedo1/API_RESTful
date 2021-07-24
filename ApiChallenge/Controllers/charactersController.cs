@@ -21,52 +21,8 @@ namespace ApiChallenge.Controllers
 		{
 			var context = new MVCContext();
 			return context.Personaje.ToList();
-
-
-
-
-			//foreach (JObject jsonOperaciones in resultadoPersonaje.Children<JObject>())
-			//{
-			//	//Aqui para poder identificar las propiedades y sus valores
-			//	/*foreach (JProperty jsonOPropiedades in jsonOperaciones.Properties())
-			//	{
-			//		string propiedad = jsonOPropiedades.Name;
-			//		if (propiedad.Equals("idgoOperacion"))
-			//		{
-			//			var idgoOperacion = Convert.ToInt32(jsonOPropiedades.Value);
-			//		}
-			//	}*/
-			//	//Aqui puedes acceder al objeto y obtener sus valores
-			//	var idgoOperacion = Convert.ToInt32(jsonOperaciones["idgoOperacion"]);
-
-
-
-			//}
-			//var resultadoPersonaje = context.Personaje.ToList();
-
-			//resultadoPersonaje.
-
-			//var returnPersonajes =new List<> {"imagen","nombre"};
-
-			//foreach (var item in resultadoPersonaje)
-			//{
-			//	for (int i = 0; i < resultadoPersonaje.Count(); i++)
-			//	{
-					
-			//		string valorImagen = resultadoPersonaje.ElementAt(i).Imagen.ToString()+","+ resultadoPersonaje.ElementAt(i).Nombre.ToString();
-			//		//var valorNombre = resultadoPersonaje.ElementAt(i).Nombre.ToString();
-			//		returnPersonajes.Add(valorImagen);
-
-			//		//List<string> aPersonajes = new List<string>{ str1, str2 };
-
-			//		//IEpersonaje = aPersonajes.AsEnumerable();
-			//	}
-			//}
-			//return returnPersonajes;
-			
-
-
 		}
+
 		[HttpGet("{id}")]
 		public Personaje GetPersonajes(int id)
 		{
